@@ -1,6 +1,6 @@
 {
-    "name": "new_goverment_app",
-    "short_name": "new_goverment_app",
+    "name": "mirror_wall",
+    "short_name": "mirror_wall",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

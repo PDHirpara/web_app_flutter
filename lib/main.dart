@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:new_goverment_app/screens/views/home_page.dart';
-import 'package:new_goverment_app/screens/views/search_engine.dart';
+import 'package:provider/provider.dart';
+import 'Screens/HomePage/Provider/provider.dart';
+import 'Screens/HomePage/Views/home_page.dart';
 
 void main() {
-  runApp(const Home());
-}
-
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(useMaterial3: true),
-      debugShowCheckedModeBanner: false,
-      routes: {
-        '/': (context) => const home_page(),
-        'search_engine': (context) => const search_engine(),
-      },
-    );
-  }
+  runApp(
+    MultiProvider(
+      providers: [
+        ListenableProvider<MenuProvider>(create: (ctx) => MenuProvider()),
+      ],
+      builder: (ctx, _) => MaterialApp(
+        theme: ThemeData(useMaterial3: true),
+        debugShowCheckedModeBanner: false,
+        routes: {
+          '/': (context) => const HomePage(),
+          // 'search_engine': (context) => const search_engine(),
+        },
+      ),
+    ),
+  );
 }

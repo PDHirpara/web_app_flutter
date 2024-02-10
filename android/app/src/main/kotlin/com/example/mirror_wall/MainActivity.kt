@@ -1,4 +1,4 @@
-package com.example.new_goverment_app
+package com.example.mirror_wall
 
 import io.flutter.embedding.android.FlutterActivity
 
