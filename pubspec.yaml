@@ -38,7 +38,7 @@ dependencies:
   provider:
   connectivity_plus:
   flutter_inappwebview:
-  uri:
+
 
 dev_dependencies:
   flutter_test:
